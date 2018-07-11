@@ -24,7 +24,7 @@ class App extends Component {
   setPageToAbout(e) {
     e.preventDefault()
 
-    this.setState(P{
+    this.setState({
       page: 'about'
     })
   }
