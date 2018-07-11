@@ -20,7 +20,7 @@ class App extends Component {
     e.preventDefault()
     
     this.setState({
-      page: 'home'
+      page: 'home',
     })
   }
 

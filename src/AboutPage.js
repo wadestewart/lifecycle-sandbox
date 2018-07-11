@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-export default class AboutPage extends Component {
+export default class AboutPage extends PureComponent {
     constructor() {
         super()
 
@@ -11,7 +11,6 @@ export default class AboutPage extends Component {
         this.decrementCounter = this.decrementCounter.bind(this)
         this.incrementCounter = this.incrementCounter.bind(this)
         this.componentDidUpdate = this.componentDidUpdate.bind(this)
-        this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this)
         this.componentDidUpdate = this.componentDidUpdate.bind(this)
         // this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this)
     }
@@ -38,16 +37,14 @@ export default class AboutPage extends Component {
         console.log('The Component DID Update...')
     }
 
-    componentWillReceiveProps() {
-        console.log('Props Received!')
-    }
-
     componentWillUpdate() {
         console.log('The Component WILL Update...')
     }
 
-    // shouldComponentUpdate() {
-    //     console.log('Should the Component Update?')
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     if (nextProps == nextState) {
+    //         console.log('Should the Component Update?')
+    //     }
     // }
 
     render() {
