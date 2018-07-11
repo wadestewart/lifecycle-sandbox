@@ -10,6 +10,10 @@ export default class AboutPage extends Component {
 
         this.decrementCounter = this.decrementCounter.bind(this)
         this.incrementCounter = this.incrementCounter.bind(this)
+        this.componentDidUpdate = this.componentDidUpdate.bind(this)
+        this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this)
+        this.componentDidUpdate = this.componentDidUpdate.bind(this)
+        // this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this)
     }
 
     decrementCounter() {
@@ -29,6 +33,22 @@ export default class AboutPage extends Component {
             counter
         })
     }
+
+    componentDidUpdate() {
+        console.log('The Component DID Update...')
+    }
+
+    componentWillReceiveProps() {
+        console.log('Props Received!')
+    }
+
+    componentWillUpdate() {
+        console.log('The Component WILL Update...')
+    }
+
+    // shouldComponentUpdate() {
+    //     console.log('Should the Component Update?')
+    // }
 
     render() {
         return(
