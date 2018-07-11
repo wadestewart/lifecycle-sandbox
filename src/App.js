@@ -11,6 +11,9 @@ class App extends Component {
     this.state = {
       page: 'home'
     }
+
+    this.setPageToAbout = this.setPageToAbout.bind(this)
+    this.setPageToHome = this.setPageToHome.bind(this)
   }
 
   setPageToHome(e) {
@@ -54,7 +57,7 @@ class App extends Component {
           <h1>Component Lifecycle</h1>
           <nav>
             <a href="/" onClick={this.setPageToHome}>Home</a>
-            <a href="/about" onCl={this.setPageToAbout}>About</a>
+            <a href="/about" onClick={this.setPageToAbout}>About</a>
           </nav>
         </header>
         <main>
